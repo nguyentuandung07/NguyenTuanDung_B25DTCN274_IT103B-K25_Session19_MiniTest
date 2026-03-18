@@ -167,6 +167,8 @@ const editUser = (id) => {
 const updateUser = (id, userObj) => {
   const findUser = users.findIndex((user) => user.id === id);
   users[findUser] = userObj;
+  setFormMode("add");
+  editingId = null;
 };
 
 const deleteUser = (id) => {
